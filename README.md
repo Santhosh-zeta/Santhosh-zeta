@@ -18,7 +18,7 @@
 - 🔭 Working across **web, data/ML, mobile and backend/cloud** — I like not staying in one lane
 - 🌱 Currently leveling up on system design and shipping side projects end-to-end
 - ⚡ Fun fact: this profile page updates itself every night (see the snake below 🐍)
-- 📫 Reach me: **your-email@example.com**
+- 📫 Reach me: **iamsanthosh2425@gmail.com**
 
 ---
 
@@ -82,9 +82,9 @@
 ### 🌐 Connect
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/your-linkedin/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-  <a href="https://twitter.com/your-handle"><img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" /></a>
-  <a href="mailto:your-email@example.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+  <a href="https://github.com/Santhosh-zeta"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
+  <a href="https://www.linkedin.com/in/santhosh---v/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+  <a href="mailto:iamsanthosh2425@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
 </p>
 
 <p align="center">
