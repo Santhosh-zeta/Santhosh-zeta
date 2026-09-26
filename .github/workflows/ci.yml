@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+    paths:
+      - profile.toml
+      - scripts/**
+      - tests/**
+      - .github/workflows/ci.yml
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.11", "3.x"] # oldest supported and newest available
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Unit tests
+        run: python -m unittest discover -s tests -t . -v
+      - name: Render every card from sample data
+        run: |
+          for kind in rich new empty; do
+            python scripts/generate.py --sample "$kind" --out "$RUNNER_TEMP/preview-$kind" --today 2026-09-25
+          done
+      - name: Every SVG is well-formed XML
+        run: |
+          python - "$RUNNER_TEMP" <<'PY'
+          import pathlib, sys, xml.etree.ElementTree as ET
+          files = sorted(pathlib.Path(sys.argv[1]).glob("preview-*/*.svg"))
+          assert files, "no SVGs rendered"
+          for f in files:
+              ET.parse(f)
+          print(f"{len(files)} SVGs OK")
+          PY

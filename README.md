@@ -3,6 +3,7 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:58A6FF,100:A371F7&height=220&section=header&text=Santhosh%20V&fontSize=60&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Full-Stack%20%C2%B7%20ML%20%C2%B7%20Mobile%20%C2%B7%20DevOps&descAlignY=55&descAlign=50" />
 
 <a href="https://github.com/Santhosh-zeta">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=600&lines=Hi+there%2C+I'm+Santhosh+%F0%9F%91%8B;Full-Stack+%2B+ML+%2B+Mobile+%2B+DevOps;Building+things+that+ship+%F0%9F%9A%80" alt="Typing SVG" />
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&duration=2800&pause=1100&color=58A6FF&center=true&vCenter=true&width=650&lines=Hi+there%2C+I'm+Santhosh+%F0%9F%91%8B;Full-Stack+%2B+ML+%2B+Mobile+%2B+DevOps;I+like+not+staying+in+one+lane+%F0%9F%9A%80;Always+shipping%2C+always+learning" alt="Typing SVG" />
 </a>
 
@@ -27,8 +28,6 @@ santhosh:
   currently_building: "side projects end-to-end, ship-first mindset"
   currently_learning: ["system design", "distributed systems", "MLOps"]
   fun_fact: "this profile refreshes itself every night — snake included 🐍"
-  reach_me: "iamsanthosh2425@gmail.com"
-  ask_me_about: ["web dev", "machine learning", "mobile apps", "cloud/devops"]
 ```
 
 - 🔭 Working across **web, data/ML, mobile and backend/cloud** — I like not staying in one lane

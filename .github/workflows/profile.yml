@@ -1,0 +1,87 @@
+name: Generate cards
+
+on:
+  schedule:
+    - cron: "0 3 * * *" # runs daily
+  workflow_dispatch: {}
+  push:
+    branches:
+      - main
+
+jobs:
+  cards:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Fetch output branch
+        run: |
+          mkdir -p dist
+          if git fetch --quiet --depth=1 origin output 2>/dev/null; then
+            git archive FETCH_HEAD | tar -x -C dist
+          fi
+
+      - name: Generate cards
+        id: cards
+        continue-on-error: true
+        timeout-minutes: 10
+        env:
+          # Optional: add a PROFILE_TOKEN secret (classic PAT, read:user) to include private contributions.
+          GITHUB_TOKEN: ${{ secrets.PROFILE_TOKEN || github.token }}
+        run: python3 scripts/generate.py --out dist --readme README.md --fetch-icons
+
+      - name: Snake colours
+        id: snake_config
+        run: python3 scripts/generate.py --snake-outputs >> "$GITHUB_OUTPUT"
+
+      - name: Generate contribution snake
+        id: snake
+        continue-on-error: true
+        timeout-minutes: 10
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: ${{ steps.snake_config.outputs.snake }}
+
+      - name: Publish to the output branch
+        if: always()
+        run: |
+          set -euo pipefail
+          if [ -z "$(ls -A dist)" ]; then echo "::error::nothing to publish"; exit 1; fi
+          export GIT_INDEX_FILE="$RUNNER_TEMP/output.index"
+          export GIT_AUTHOR_NAME="$OWNER_NAME" GIT_AUTHOR_EMAIL="$OWNER_EMAIL"
+          export GIT_COMMITTER_NAME="$OWNER_NAME" GIT_COMMITTER_EMAIL="$OWNER_EMAIL"
+          git --work-tree=dist add --all
+          commit=$(git commit-tree "$(git write-tree)" -m "Publish profile assets")
+          # One orphan commit, force-pushed: the branch never accumulates years of history.
+          git push --force --quiet origin "$commit:refs/heads/output"
+          echo "Published $(ls dist | wc -l) files to the output branch"
+
+      - name: Commit refreshed featured projects
+        if: always()
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- README.md; then echo "README unchanged"; exit 0; fi
+          git add README.md
+          git -c user.name="$OWNER_NAME" -c user.email="$OWNER_EMAIL" commit --quiet -m "Refresh featured projects"
+          git push --quiet origin "HEAD:${GITHUB_REF_NAME}" || {
+            git pull --quiet --rebase origin "$GITHUB_REF_NAME"
+            git push --quiet origin "HEAD:${GITHUB_REF_NAME}"
+          }
+
+      # GitHub disables scheduled workflows in repos without activity for 60 days;
+      # re-enabling from inside the run resets that clock.
+      - name: Keep the nightly schedule alive
+        if: github.event_name == 'schedule'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method PUT "repos/${GITHUB_REPOSITORY}/actions/workflows/profile.yml/enable"
+
+      - name: Report failures
+        if: steps.cards.outcome == 'failure' || steps.snake.outcome == 'failure'
+        run: |
+          echo "::error::Some images could not be regenerated; their previously published versions were kept."
+          exit 1

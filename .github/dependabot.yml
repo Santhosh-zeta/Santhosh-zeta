@@ -1,0 +1,10 @@
+# Keeps the pinned GitHub Actions current so the nightly build keeps running as GitHub evolves.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    groups:
+      actions:
+        patterns: ["*"]

@@ -1,0 +1,57 @@
+# Everything personal on the profile lives here. Edit this file, push, and the
+# "Profile" GitHub Action regenerates every card on the profile page.
+
+[profile]
+username = "Santhosh-zeta"
+name = "Santhosh"
+tagline = "Full-Stack · ML · Mobile · DevOps"
+
+# Lines cycled by the typing animation under the banner. Keep emoji out of these
+# (they render differently on every OS); plain text looks crisp everywhere.
+typing_lines = [
+  "Hi there, I'm Santhosh",
+  "Full-Stack + ML + Mobile + DevOps",
+  "I like not staying in one lane",
+  "Building things that ship",
+]
+
+[links]
+github = "https://github.com/Santhosh-zeta"
+linkedin = "https://www.linkedin.com/in/santhosh---v/"
+email = "iamsanthosh2425@gmail.com"
+
+# Tech stack rows. Icon names are https://skillicons.dev ids.
+[[stack]]
+label = "Web & Full-Stack"
+icons = ["js", "react", "nodejs", "html", "css", "tailwind"]
+
+[[stack]]
+label = "Data & ML"
+icons = ["python", "pytorch", "tensorflow", "sklearn", "pandas"]
+
+[[stack]]
+label = "Mobile"
+icons = ["kotlin", "java", "flutter", "dart", "androidstudio"]
+
+[[stack]]
+label = "Cloud & DevOps"
+icons = ["aws", "docker", "githubactions", "linux", "postgres", "git"]
+
+[featured]
+# Pinned repositories are featured first; if fewer are pinned, the top public
+# repos by stars (then most recently pushed) fill the remaining slots.
+count = 4
+exclude = []
+
+[languages]
+count = 8
+exclude = []
+
+# Brand colours. Light mode needs darker shades to keep contrast on white.
+[theme.dark]
+accent = "#58A6FF"
+accent_2 = "#A371F7"
+
+[theme.light]
+accent = "#0969DA"
+accent_2 = "#8250DF"
