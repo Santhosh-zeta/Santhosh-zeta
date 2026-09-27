@@ -49,9 +49,9 @@ exclude = []
 
 # Brand colours. Light mode needs darker shades to keep contrast on white.
 [theme.dark]
-accent = "#58A6FF"
-accent_2 = "#A371F7"
+accent = "#05D9E8"
+accent_2 = "#FF2A7A"
 
 [theme.light]
-accent = "#0969DA"
-accent_2 = "#8250DF"
+accent = "#038B96"
+accent_2 = "#C90C53"

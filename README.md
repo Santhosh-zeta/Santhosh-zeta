@@ -1,16 +1,16 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:58A6FF,100:A371F7&height=220&section=header&text=Santhosh%20V&fontSize=60&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Full-Stack%20%C2%B7%20ML%20%C2%B7%20Mobile%20%C2%B7%20DevOps&descAlignY=55&descAlign=50" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:05D9E8,100:FF2A7A&height=220&section=header&text=Santhosh%20V&fontSize=60&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Full-Stack%20%C2%B7%20ML%20%C2%B7%20Mobile%20%C2%B7%20DevOps&descAlignY=55&descAlign=50" />
 
 <a href="https://github.com/Santhosh-zeta">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=600&lines=Hi+there%2C+I'm+Santhosh+%F0%9F%91%8B;Full-Stack+%2B+ML+%2B+Mobile+%2B+DevOps;Building+things+that+ship+%F0%9F%9A%80" alt="Typing SVG" />
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&duration=2800&pause=1100&color=58A6FF&center=true&vCenter=true&width=650&lines=Hi+there%2C+I'm+Santhosh+%F0%9F%91%8B;Full-Stack+%2B+ML+%2B+Mobile+%2B+DevOps;I+like+not+staying+in+one+lane+%F0%9F%9A%80;Always+shipping%2C+always+learning" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=3000&pause=1000&color=05D9E8&center=true&vCenter=true&width=600&lines=Hi+there%2C+I'm+Santhosh+%F0%9F%91%8B;Full-Stack+%2B+ML+%2B+Mobile+%2B+DevOps;Building+things+that+ship+%F0%9F%9A%80" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&duration=2800&pause=1100&color=05D9E8&center=true&vCenter=true&width=650&lines=Hi+there%2C+I'm+Santhosh+%F0%9F%91%8B;Full-Stack+%2B+ML+%2B+Mobile+%2B+DevOps;I+like+not+staying+in+one+lane+%F0%9F%9A%80;Always+shipping%2C+always+learning" alt="Typing SVG" />
 </a>
 
 <br/>
 
-<img src="https://komarev.com/ghpvc/?username=Santhosh-zeta&label=Profile%20Views&color=58A6FF&style=for-the-badge" alt="profile views" />
-<img src="https://img.shields.io/github/followers/Santhosh-zeta?label=Followers&style=for-the-badge&color=A371F7&logo=github" alt="followers" />
+<img src="https://komarev.com/ghpvc/?username=Santhosh-zeta&label=Profile%20Views&color=05D9E8&style=for-the-badge" alt="profile views" />
+<img src="https://img.shields.io/github/followers/Santhosh-zeta?label=Followers&style=for-the-badge&color=FF2A7A&logo=github" alt="followers" />
 <img src="https://img.shields.io/badge/Status-Open%20to%20Work-success?style=for-the-badge&logo=briefcase&logoColor=white" alt="status" />
 
 </div>
@@ -98,12 +98,12 @@ santhosh:
 ## 📊 GitHub Analytics
 
 <p align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=Santhosh-zeta&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true" />
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Santhosh-zeta&layout=compact&theme=tokyonight&hide_border=true&langs_count=10" />
+  <img height="170" src="https://github-readme-stats.vercel.app/api?username=Santhosh-zeta&show_icons=true&theme=radical&hide_border=true&count_private=true&include_all_commits=true" />
+  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Santhosh-zeta&layout=compact&theme=radical&hide_border=true&langs_count=10" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Santhosh-zeta&theme=tokyonight&hide_border=true" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Santhosh-zeta&theme=radical&hide_border=true" />
 </p>
 
 <p align="center">
@@ -144,10 +144,10 @@ santhosh:
 
 <p align="center">
   <a href="https://github.com/Santhosh-zeta?tab=repositories&sort=stargazers">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=Santhosh-zeta&repo=REPLACE_WITH_REPO_NAME&theme=tokyonight&hide_border=true" />
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=Santhosh-zeta&repo=REPLACE_WITH_REPO_NAME&theme=radical&hide_border=true" />
   </a>
   <a href="https://github.com/Santhosh-zeta?tab=repositories&sort=stargazers">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=Santhosh-zeta&repo=REPLACE_WITH_REPO_NAME_2&theme=tokyonight&hide_border=true" />
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=Santhosh-zeta&repo=REPLACE_WITH_REPO_NAME_2&theme=radical&hide_border=true" />
   </a>
 </p>
 
@@ -163,7 +163,7 @@ santhosh:
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:A371F7,100:58A6FF&height=150&section=footer" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:FF2A7A,100:05D9E8&height=150&section=footer" />
 
 <sub>⭐ If you're checking out my repos, drop a star — it makes my day.</sub>
 
