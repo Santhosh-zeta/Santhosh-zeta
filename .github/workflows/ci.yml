@@ -8,6 +8,7 @@ on:
       - profile.toml
       - scripts/**
       - tests/**
+      - assets/**
       - .github/workflows/ci.yml
 
 permissions:
@@ -20,26 +21,16 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python: ["3.11", "3.x"] # oldest supported and newest available
+        python: ["3.11", "3.x"]
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-python@v6
         with:
           python-version: ${{ matrix.python }}
-      - name: Unit tests
+      - name: Tests (includes "committed assets match profile.toml")
         run: python -m unittest discover -s tests -t . -v
       - name: Render every card from sample data
         run: |
           for kind in rich new empty; do
-            python scripts/generate.py --sample "$kind" --out "$RUNNER_TEMP/preview-$kind" --today 2026-09-25
+            python scripts/generate.py --sample "$kind" --out "$RUNNER_TEMP/preview-$kind" --today 2026-11-09
           done
-      - name: Every SVG is well-formed XML
-        run: |
-          python - "$RUNNER_TEMP" <<'PY'
-          import pathlib, sys, xml.etree.ElementTree as ET
-          files = sorted(pathlib.Path(sys.argv[1]).glob("preview-*/*.svg"))
-          assert files, "no SVGs rendered"
-          for f in files:
-              ET.parse(f)
-          print(f"{len(files)} SVGs OK")
-          PY

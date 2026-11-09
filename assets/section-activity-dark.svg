@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="64" viewBox="0 0 900 64" role="img" aria-labelledby="t d" fill="none"><title id="t">Activity</title><desc id="d">Activity</desc><style>
+text{font-family:ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace}
+.sans{font-family:'Helvetica Neue',Helvetica,Arial,'Liberation Sans','Segoe UI',sans-serif}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes rise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+@keyframes draw{from{stroke-dashoffset:var(--len)}to{stroke-dashoffset:0}}
+.fade{animation:fade .8s ease-out both}
+.rise{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+.dl{stroke-dasharray:var(--len);animation:draw 1.4s cubic-bezier(.2,.7,.2,1) both}</style><text x="2" y="42" font-size="12" letter-spacing="2" fill="#6b6b6b">03</text><text class="sans" x="40" y="44" font-size="26" font-weight="300" letter-spacing="7" fill="#fafafa">ACTIVITY</text><path class="dl" style="--len:900" d="M0 62H900" stroke="#2b2b2b"/><path d="M0 62H40" stroke="#fafafa" stroke-width="1.5"/></svg>

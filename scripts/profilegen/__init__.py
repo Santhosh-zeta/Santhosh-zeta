@@ -1,1 +1,1 @@
-"""Self-hosted GitHub profile card generator (Python stdlib only)."""
+"""Self-hosted, monochrome GitHub profile renderer (Python standard library only)."""

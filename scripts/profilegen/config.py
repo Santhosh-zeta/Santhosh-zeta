@@ -1,30 +1,28 @@
+"""profile.toml -> typed config."""
 from __future__ import annotations
 
 import tomllib
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Dict, List
-
-
-@dataclass
-class StackGroup:
-    label: str
-    icons: List[str]
+from typing import Dict, List, Tuple
 
 
 @dataclass
 class Config:
     username: str
     name: str
-    tagline: str
+    year_label: str
+    roles: List[str]
     typing_lines: List[str]
+    status: str
+    quote: str
+    about_rows: List[Tuple[str, str]]
+    stack: List[Tuple[str, List[str]]]
     links: Dict[str, str]
-    stack: List[StackGroup]
+    featured_repos: List[str] = field(default_factory=list)
     featured_count: int = 4
-    featured_exclude: List[str] = field(default_factory=list)
     languages_count: int = 8
     languages_exclude: List[str] = field(default_factory=list)
-    theme_overrides: Dict[str, Dict[str, str]] = field(default_factory=dict)
 
     @property
     def assets_base(self) -> str:
@@ -33,19 +31,21 @@ class Config:
 
 def load(path: Path) -> Config:
     raw = tomllib.loads(Path(path).read_text(encoding="utf-8"))
-    profile = raw["profile"]
-    featured = raw.get("featured", {})
-    languages = raw.get("languages", {})
+    p, about = raw["profile"], raw.get("about", {})
+    feat, langs = raw.get("featured", {}), raw.get("languages", {})
     return Config(
-        username=profile["username"],
-        name=profile.get("name") or profile["username"],
-        tagline=profile.get("tagline", ""),
-        typing_lines=list(profile.get("typing_lines") or [profile.get("name") or profile["username"]]),
+        username=p["username"],
+        name=p["name"],
+        year_label=str(p.get("year_label", "")),
+        roles=list(p.get("roles", [])),
+        typing_lines=[s[:38] for s in p.get("typing_lines", [p["name"]])],
+        status=p.get("status", ""),
+        quote=about.get("quote", ""),
+        about_rows=[(r["key"], r["value"]) for r in about.get("rows", [])],
+        stack=[(g["label"], list(g["items"])) for g in raw.get("stack", [])],
         links=dict(raw.get("links", {})),
-        stack=[StackGroup(label=g["label"], icons=list(g["icons"])) for g in raw.get("stack", [])],
-        featured_count=int(featured.get("count", 4)),
-        featured_exclude=list(featured.get("exclude", [])),
-        languages_count=int(languages.get("count", 8)),
-        languages_exclude=list(languages.get("exclude", [])),
-        theme_overrides={k: dict(v) for k, v in raw.get("theme", {}).items()},
+        featured_repos=list(feat.get("repos", [])),
+        featured_count=int(feat.get("count", 4)),
+        languages_count=int(langs.get("count", 8)),
+        languages_exclude=[s.lower() for s in langs.get("exclude", [])],
     )

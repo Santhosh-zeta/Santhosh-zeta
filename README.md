@@ -1,170 +1,128 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:05D9E8,100:FF2A7A&height=220&section=header&text=Santhosh%20V&fontSize=60&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Full-Stack%20%C2%B7%20ML%20%C2%B7%20Mobile%20%C2%B7%20DevOps&descAlignY=55&descAlign=50" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/hero-light.svg">
+  <img alt="Santhosh V — Full-Stack, ML, Mobile, DevOps" src="assets/hero-dark.svg" width="100%">
+</picture>
 
-<a href="https://github.com/Santhosh-zeta">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=3000&pause=1000&color=05D9E8&center=true&vCenter=true&width=600&lines=Hi+there%2C+I'm+Santhosh+%F0%9F%91%8B;Full-Stack+%2B+ML+%2B+Mobile+%2B+DevOps;Building+things+that+ship+%F0%9F%9A%80" alt="Typing SVG" />
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&duration=2800&pause=1100&color=05D9E8&center=true&vCenter=true&width=650&lines=Hi+there%2C+I'm+Santhosh+%F0%9F%91%8B;Full-Stack+%2B+ML+%2B+Mobile+%2B+DevOps;I+like+not+staying+in+one+lane+%F0%9F%9A%80;Always+shipping%2C+always+learning" alt="Typing SVG" />
-</a>
+<br>
 
-<br/>
-
-<img src="https://komarev.com/ghpvc/?username=Santhosh-zeta&label=Profile%20Views&color=05D9E8&style=for-the-badge" alt="profile views" />
-<img src="https://img.shields.io/github/followers/Santhosh-zeta?label=Followers&style=for-the-badge&color=FF2A7A&logo=github" alt="followers" />
-<img src="https://img.shields.io/badge/Status-Open%20to%20Work-success?style=for-the-badge&logo=briefcase&logoColor=white" alt="status" />
+<a href="https://github.com/Santhosh-zeta"><b>GitHub</b></a> &nbsp;·&nbsp;
+<a href="https://www.linkedin.com/in/santhosh---v/"><b>LinkedIn</b></a> &nbsp;·&nbsp;
+<a href="mailto:iamsanthosh2425@gmail.com"><b>Email</b></a>
 
 </div>
 
-<br/>
+<br>
 
-## 🧠 About Me
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/section-about-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/section-about-light.svg">
+  <img alt="About" src="assets/section-about-dark.svg" width="100%">
+</picture>
 
-<img align="right" width="290" src="https://github-readme-activity-graph.vercel.app/graph?username=Santhosh-zeta&theme=react-dark&hide_border=true&area=true&custom_title=%20" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/about-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/about-light.svg">
+  <img alt="About Santhosh" src="assets/about-dark.svg" width="100%">
+</picture>
 
-```yaml
-santhosh:
-  role: "Full-Stack · ML · Mobile · DevOps Engineer"
-  location: "Earth 🌍"
-  currently_building: "side projects end-to-end, ship-first mindset"
-  currently_learning: ["system design", "distributed systems", "MLOps"]
-  fun_fact: "this profile refreshes itself every night — snake included 🐍"
-```
+<br>
 
-- 🔭 Working across **web, data/ML, mobile and backend/cloud** — I like not staying in one lane
-- 🌱 Currently leveling up on **system design** and shipping side projects end-to-end
-- 🤝 Open to collaborating on interesting full-stack / ML / mobile projects
-- ⚡ Fun fact: this profile updates itself every night — see the snake and metrics below
-- 📫 Reach me at **iamsanthosh2425@gmail.com**
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/section-stack-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/section-stack-light.svg">
+  <img alt="Stack" src="assets/section-stack-dark.svg" width="100%">
+</picture>
 
-<br clear="right"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/stack-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/stack-light.svg">
+  <img alt="Tech stack" src="assets/stack-dark.svg" width="100%">
+</picture>
 
----
+<br>
 
-## 🛠️ Tech Stack
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/section-activity-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/section-activity-light.svg">
+  <img alt="Activity" src="assets/section-activity-dark.svg" width="100%">
+</picture>
 
-<table align="center">
-<tr>
-<td valign="top" width="50%">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Santhosh-zeta/Santhosh-zeta/output/activity-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Santhosh-zeta/Santhosh-zeta/output/activity-light.svg">
+  <img alt="Contribution activity over the last 12 months" src="https://raw.githubusercontent.com/Santhosh-zeta/Santhosh-zeta/output/activity-dark.svg" width="100%">
+</picture>
 
-**Frontend**
+<br>
 
-<img src="https://skillicons.dev/icons?i=js,ts,react,html,css,tailwind" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Santhosh-zeta/Santhosh-zeta/output/stats-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Santhosh-zeta/Santhosh-zeta/output/stats-light.svg">
+  <img alt="GitHub numbers and language breakdown" src="https://raw.githubusercontent.com/Santhosh-zeta/Santhosh-zeta/output/stats-dark.svg" width="100%">
+</picture>
 
-</td>
-<td valign="top" width="50%">
+<br>
 
-**Backend / APIs**
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/section-work-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/section-work-light.svg">
+  <img alt="Work" src="assets/section-work-dark.svg" width="100%">
+</picture>
 
-<img src="https://skillicons.dev/icons?i=nodejs,express,fastapi,postgres,mongodb,redis" />
-
-</td>
-</tr>
-<tr>
-<td valign="top" width="50%">
-
-**Data / ML**
-
-<img src="https://skillicons.dev/icons?i=python,pytorch,tensorflow,sklearn,pandas" />
-
-</td>
-<td valign="top" width="50%">
-
-**Mobile**
-
-<img src="https://skillicons.dev/icons?i=kotlin,java,flutter,dart,androidstudio" />
-
-</td>
-</tr>
-<tr>
-<td valign="top" width="50%">
-
-**Cloud / DevOps**
-
-<img src="https://skillicons.dev/icons?i=aws,docker,kubernetes,githubactions,terraform,linux" />
-
-</td>
-<td valign="top" width="50%">
-
-**Tools**
-
-<img src="https://skillicons.dev/icons?i=git,github,vscode,figma,postman,vercel" />
-
-</td>
-</tr>
+<!-- work:start -->
+<table>
+<tr><td width="50%"><a href="https://github.com/Santhosh-zeta/ColdGuard">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Santhosh-zeta/Santhosh-zeta/output/project-1-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Santhosh-zeta/Santhosh-zeta/output/project-1-light.svg">
+  <img alt="Santhosh-zeta/ColdGuard: " src="https://raw.githubusercontent.com/Santhosh-zeta/Santhosh-zeta/output/project-1-dark.svg" width="100%">
+</picture>
+</a></td><td width="50%"><a href="https://github.com/Santhosh-zeta/MAVIRA">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Santhosh-zeta/Santhosh-zeta/output/project-2-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Santhosh-zeta/Santhosh-zeta/output/project-2-light.svg">
+  <img alt="Santhosh-zeta/MAVIRA: " src="https://raw.githubusercontent.com/Santhosh-zeta/Santhosh-zeta/output/project-2-dark.svg" width="100%">
+</picture>
+</a></td></tr>
+<tr><td width="50%"><a href="https://github.com/Santhosh-zeta/Clinical-Database-Intelligence">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Santhosh-zeta/Santhosh-zeta/output/project-3-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Santhosh-zeta/Santhosh-zeta/output/project-3-light.svg">
+  <img alt="Santhosh-zeta/Clinical-Database-Intelligence: " src="https://raw.githubusercontent.com/Santhosh-zeta/Santhosh-zeta/output/project-3-dark.svg" width="100%">
+</picture>
+</a></td><td width="50%"><a href="https://github.com/Santhosh-zeta/Dropwing_Groups-Public_Website">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Santhosh-zeta/Santhosh-zeta/output/project-4-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Santhosh-zeta/Santhosh-zeta/output/project-4-light.svg">
+  <img alt="Santhosh-zeta/Dropwing_Groups-Public_Website: " src="https://raw.githubusercontent.com/Santhosh-zeta/Santhosh-zeta/output/project-4-dark.svg" width="100%">
+</picture>
+</a></td></tr>
 </table>
+<!-- work:end -->
 
----
+<br>
 
-## 📊 GitHub Analytics
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/section-contact-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/section-contact-light.svg">
+  <img alt="Contact" src="assets/section-contact-dark.svg" width="100%">
+</picture>
 
-<p align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=Santhosh-zeta&show_icons=true&theme=radical&hide_border=true&count_private=true&include_all_commits=true" />
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Santhosh-zeta&layout=compact&theme=radical&hide_border=true&langs_count=10" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Santhosh-zeta&theme=radical&hide_border=true" />
-</p>
-
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=Santhosh-zeta&theme=algolia&no-frame=true&row=1&column=7&margin-w=10&margin-h=10" />
-</p>
-
-<details>
-<summary>📅 Full contribution & language metrics (click to expand)</summary>
-<br/>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Santhosh-zeta/Santhosh-zeta/output/github-metrics.svg" alt="detailed metrics" width="100%" />
-</p>
-
-*Generated nightly by [`.github/workflows/metrics.yml`](.github/workflows/metrics.yml) — isometric contribution calendar, languages breakdown, achievements & activity habits, all in one card.*
-
-</details>
-
----
-
-## 🐍 Contribution Snake
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Santhosh-zeta/Santhosh-zeta/output/github-contribution-grid-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Santhosh-zeta/Santhosh-zeta/output/github-contribution-grid-snake.svg" />
-    <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/Santhosh-zeta/Santhosh-zeta/output/github-contribution-grid-snake.svg" width="100%"/>
-  </picture>
-</p>
-
-*Generated nightly by [`.github/workflows/snake.yml`](.github/workflows/snake.yml) and published to the `output` branch.*
-
----
-
-## 📌 Featured Projects
-
-> Pin your best repos from your [GitHub profile settings](https://github.com/Santhosh-zeta?tab=repositories) so they show up here as live pinned cards. Swap the `repo=` value below for each project you want to spotlight:
-
-<p align="center">
-  <a href="https://github.com/Santhosh-zeta?tab=repositories&sort=stargazers">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=Santhosh-zeta&repo=REPLACE_WITH_REPO_NAME&theme=radical&hide_border=true" />
-  </a>
-  <a href="https://github.com/Santhosh-zeta?tab=repositories&sort=stargazers">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=Santhosh-zeta&repo=REPLACE_WITH_REPO_NAME_2&theme=radical&hide_border=true" />
-  </a>
-</p>
-
----
-
-## 🌐 Connect With Me
-
-<p align="center">
-  <a href="https://github.com/Santhosh-zeta"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
-  <a href="https://www.linkedin.com/in/santhosh---v/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-  <a href="mailto:iamsanthosh2425@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
-</p>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/connect-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/connect-light.svg">
+  <img alt="Let's build something" src="assets/connect-dark.svg" width="100%">
+</picture>
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:FF2A7A,100:05D9E8&height=150&section=footer" />
+<br>
 
-<sub>⭐ If you're checking out my repos, drop a star — it makes my day.</sub>
+<a href="mailto:iamsanthosh2425@gmail.com">iamsanthosh2425@gmail.com</a> &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/santhosh---v/">LinkedIn</a> &nbsp;·&nbsp; <a href="https://github.com/Santhosh-zeta">GitHub</a>
+
+<sub>Cards are generated from <a href="profile.toml"><code>profile.toml</code></a> by <a href="scripts/generate.py"><code>scripts/</code></a> — plain Python, no dependencies. Live cards rebuild nightly.</sub>
 
 </div>

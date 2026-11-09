@@ -1,57 +1,74 @@
-# Everything personal on the profile lives here. Edit this file, push, and the
-# "Profile" GitHub Action regenerates every card on the profile page.
+# Everything personal lives here. Edit, push, and the workflows do the rest.
+#   python scripts/generate.py --static     -> re-render the committed cards in assets/
+#   the nightly "Profile" workflow          -> refreshes live cards (activity, numbers, work)
 
 [profile]
 username = "Santhosh-zeta"
-name = "Santhosh"
-tagline = "Full-Stack · ML · Mobile · DevOps"
-
-# Lines cycled by the typing animation under the banner. Keep emoji out of these
-# (they render differently on every OS); plain text looks crisp everywhere.
+name = "Santhosh V"
+year_label = "PORTFOLIO — 2026"
+roles = ["Full-Stack", "ML", "Mobile", "DevOps"]
+status = "Open to work"
+# Cycled by the typing animation. Max 38 characters each; plain text, no emoji.
 typing_lines = [
-  "Hi there, I'm Santhosh",
-  "Full-Stack + ML + Mobile + DevOps",
-  "I like not staying in one lane",
-  "Building things that ship",
+  "Hi, I'm Santhosh.",
+  "I build things that ship.",
+  "Web, ML, mobile and cloud.",
+  "Always shipping, always learning.",
 ]
+
+[about]
+quote = "I like not staying in one lane."
+
+[[about.rows]]
+key = "Role"
+value = "Full-Stack · ML · Mobile · DevOps"
+[[about.rows]]
+key = "Building"
+value = "Side projects, end to end"
+[[about.rows]]
+key = "Learning"
+value = "System design · MLOps"
+[[about.rows]]
+key = "Works across"
+value = "Web · Data/ML · Mobile · Cloud"
+[[about.rows]]
+key = "Open to"
+value = "Full-stack, ML and mobile collabs"
+[[about.rows]]
+key = "This page"
+value = "Rebuilds itself every night"
 
 [links]
 github = "https://github.com/Santhosh-zeta"
 linkedin = "https://www.linkedin.com/in/santhosh---v/"
 email = "iamsanthosh2425@gmail.com"
 
-# Tech stack rows. Icon names are https://skillicons.dev ids.
 [[stack]]
 label = "Web & Full-Stack"
-icons = ["js", "react", "nodejs", "html", "css", "tailwind"]
+items = ["JavaScript", "TypeScript", "React", "Node.js", "Express", "HTML", "CSS", "Tailwind"]
 
 [[stack]]
 label = "Data & ML"
-icons = ["python", "pytorch", "tensorflow", "sklearn", "pandas"]
+items = ["Python", "PyTorch", "TensorFlow", "scikit-learn", "pandas", "FastAPI"]
 
 [[stack]]
 label = "Mobile"
-icons = ["kotlin", "java", "flutter", "dart", "androidstudio"]
+items = ["Kotlin", "Java", "Flutter", "Dart"]
 
 [[stack]]
 label = "Cloud & DevOps"
-icons = ["aws", "docker", "githubactions", "linux", "postgres", "git"]
+items = ["AWS", "Docker", "Kubernetes", "Terraform", "GitHub Actions", "Linux", "PostgreSQL", "MongoDB", "Redis", "Git"]
 
 [featured]
-# Pinned repositories are featured first; if fewer are pinned, the top public
-# repos by stars (then most recently pushed) fill the remaining slots.
+# Shown in this order. Leave `repos` empty to use whatever you have pinned on GitHub.
+repos = [
+  "Santhosh-zeta/ColdGuard",
+  "Santhosh-zeta/MAVIRA",
+  "Santhosh-zeta/Clinical-Database-Intelligence",
+  "Santhosh-zeta/Dropwing_Groups-Public_Website",
+]
 count = 4
-exclude = []
 
 [languages]
 count = 8
 exclude = []
-
-# Brand colours. Light mode needs darker shades to keep contrast on white.
-[theme.dark]
-accent = "#05D9E8"
-accent_2 = "#FF2A7A"
-
-[theme.light]
-accent = "#038B96"
-accent_2 = "#C90C53"

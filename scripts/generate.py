@@ -1,67 +1,83 @@
-    """Platane/snk `outputs` lines, coloured from the same palette as the cards."""
-    themes = build_themes(cfg.theme_overrides)
-    lines = []
-    for name, theme in themes.items():
-        palette = "palette=github-dark&" if name == "dark" else ""
-        dots = ",".join(theme.levels)
-        lines.append(f"dist/snake-{name}.svg?{palette}color_snake={theme.accent_2}&color_dots={dots}")
-    return "snake<<SNAKE_EOF\n" + "\n".join(lines) + "\nSNAKE_EOF"
+#!/usr/bin/env python3
+"""Render the profile's SVG cards.
+
+  generate.py --static                    rewrite committed cards in assets/
+  generate.py --live --out dist           fetch GitHub data, render live cards (needs GITHUB_TOKEN)
+  generate.py --sample rich --out /tmp/x  render everything from synthetic data (no network)
+"""
+from __future__ import annotations
+
+import argparse
+import json
+import os
+import sys
+from datetime import date, datetime, timezone
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+from profilegen import build, config as config_mod, github, sample  # noqa: E402
+from profilegen.model import Context, ProfileData  # noqa: E402
 
 
-def main(argv: Optional[List[str]] = None) -> int:
-    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("--config", type=Path, default=ROOT / "profile.toml")
-    parser.add_argument("--out", type=Path, default=ROOT / "dist")
-    parser.add_argument("--readme", type=Path, help="README whose featured-projects block should be refreshed")
-    source = parser.add_mutually_exclusive_group()
-    source.add_argument("--sample", choices=sample.KINDS, help="render synthetic data (no network)")
-    source.add_argument("--data", type=Path, help="render from a saved data.json (no network)")
-    parser.add_argument("--fetch-icons", action="store_true", help="download missing skill icons into OUT/icons")
-    parser.add_argument("--today", type=date.fromisoformat, help="override today's date (YYYY-MM-DD)")
-    parser.add_argument("--snake-outputs", action="store_true", help="print Platane/snk outputs for $GITHUB_OUTPUT")
-    args = parser.parse_args(argv)
+def annotate(level: str, msg: str) -> None:
+    print(f"::{level}::{msg}" if os.environ.get("GITHUB_ACTIONS") else f"{level}: {msg}", file=sys.stderr)
+
+
+def main(argv=None) -> int:
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--config", type=Path, default=ROOT / "profile.toml")
+    ap.add_argument("--out", type=Path, default=ROOT / "dist")
+    ap.add_argument("--static", action="store_true", help="render the data-free cards into assets/")
+    ap.add_argument("--live", action="store_true", help="fetch GitHub data and render the live cards")
+    ap.add_argument("--sample", choices=sample.KINDS, help="synthetic data, renders every card")
+    ap.add_argument("--readme", type=Path, help="README whose work grid should be refreshed (with --live)")
+    ap.add_argument("--today", type=date.fromisoformat)
+    args = ap.parse_args(argv)
 
     cfg = config_mod.load(args.config)
-    if args.snake_outputs:
-        print(snake_outputs(cfg))
-        return 0
-
     now = datetime.now(timezone.utc)
     today = args.today or now.date()
-    out = args.out
-    out.mkdir(parents=True, exist_ok=True)
-    icons = IconStore([ROOT / "assets" / "icons", out / "icons"], fetch=args.fetch_icons)
-    failures: List[str] = []
 
-    data: Optional[ProfileData] = None
-    try:
-        data = load_data(args, cfg, today, now)
-    except Exception as exc:
-        failures.append("github-data")
-        annotate("error", f"Could not load GitHub data ({exc}); data cards keep their last published version")
+    if args.static:
+        files = build.render_static(Context(cfg, None, today))
+        build.write(files, ROOT / "assets", prune_prefixes=build.STATIC)
+        print(f"wrote {len(files)} static cards to assets/")
+        return 0
 
-    if data is not None:
-        (out / "data.json").write_text(json.dumps(data.to_json(), indent=1, ensure_ascii=False), encoding="utf-8")
-    (out / "README.md").write_text(OUTPUT_README, encoding="utf-8")
+    if args.sample:
+        data = sample.sample_profile(args.sample, today)
+        ctx = Context(cfg, data, today)
+        files = {**build.render_static(ctx), **build.render_live(ctx)}
+        build.write(files, args.out)
+        print(f"wrote {len(files)} sample cards to {args.out}")
+        return 0
 
-    written = render_cards(out, cfg, icons, data, today, failures)
-    print(f"wrote {written} SVGs to {out}")
-    if icons.misses:
-        annotate("warning", "missing skill icons (fallback tiles used): " + ", ".join(sorted(set(icons.misses))))
+    if args.live:
+        token = os.environ.get("GITHUB_TOKEN")
+        if not token:
+            annotate("error", "GITHUB_TOKEN is not set")
+            return 1
+        try:
+            data = github.fetch(cfg, today, now, github.http_transport(token))
+        except Exception as exc:  # keep the last published cards on any failure
+            annotate("error", f"could not load GitHub data: {exc}")
+            return 1
+        ctx = Context(cfg, data, today)
+        files = build.render_live(ctx)
+        build.write(files, args.out, prune_prefixes=("project-",))
+        (args.out / "data.json").write_text(json.dumps(data.to_json(), indent=1, ensure_ascii=False), encoding="utf-8")
+        print(f"wrote {len(files)} live cards to {args.out}")
+        if args.readme:
+            text = args.readme.read_text(encoding="utf-8")
+            new = build.update_readme(text, build.work_markdown(cfg, data.featured))
+            if new != text:
+                args.readme.write_text(new, encoding="utf-8")
+                print(f"refreshed work grid in {args.readme}")
+        return 0
 
-    if data is not None and args.readme:
-        text = args.readme.read_text(encoding="utf-8")
-        updated = readme.update_readme(text, readme.featured_markdown(cfg, data.featured))
-        if updated == text and readme.START not in text:
-            annotate("warning", f"{args.readme} has no featured-projects markers; left untouched")
-        elif updated != text:
-            args.readme.write_text(updated, encoding="utf-8")
-            print(f"refreshed featured projects in {args.readme}")
-
-    if failures:
-        annotate("error", "failed: " + ", ".join(failures))
-        return 1
-    return 0
+    ap.error("choose one of --static, --live, --sample")
 
 
 if __name__ == "__main__":
