@@ -78,26 +78,26 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Santhosh-zeta/Santhosh-zeta/output/project-1-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Santhosh-zeta/Santhosh-zeta/output/project-1-light.svg">
-  <img alt="Santhosh-zeta/ColdGuard: " src="https://raw.githubusercontent.com/Santhosh-zeta/Santhosh-zeta/output/project-1-dark.svg" width="100%">
+  <img alt="Santhosh-zeta/ColdGuard: Open-source vaccine cold-chain tool: turns a temperature log into a USE / INVESTIGATE / DISCARD decision with uncertainty, using Arrhenius kinetics and Monte Carlo. CLI, web app, REST API (DHIS2 export) and an offline Android app in 6 Indian languages. Research prototype, not a medical device." src="https://raw.githubusercontent.com/Santhosh-zeta/Santhosh-zeta/output/project-1-dark.svg" width="100%">
 </picture>
 </a></td><td width="50%"><a href="https://github.com/Santhosh-zeta/MAVIRA">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Santhosh-zeta/Santhosh-zeta/output/project-2-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Santhosh-zeta/Santhosh-zeta/output/project-2-light.svg">
-  <img alt="Santhosh-zeta/MAVIRA: " src="https://raw.githubusercontent.com/Santhosh-zeta/Santhosh-zeta/output/project-2-dark.svg" width="100%">
+  <img alt="Santhosh-zeta/MAVIRA: financial institution's vendor inventory workbook, automatically determines how deeply each vendor should be investigated based on criticality, collects OSINT evidence from public web pages, and runs a fully deterministic pipeline to answer" src="https://raw.githubusercontent.com/Santhosh-zeta/Santhosh-zeta/output/project-2-dark.svg" width="100%">
 </picture>
 </a></td></tr>
 <tr><td width="50%"><a href="https://github.com/Santhosh-zeta/Clinical-Database-Intelligence">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Santhosh-zeta/Santhosh-zeta/output/project-3-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Santhosh-zeta/Santhosh-zeta/output/project-3-light.svg">
-  <img alt="Santhosh-zeta/Clinical-Database-Intelligence: " src="https://raw.githubusercontent.com/Santhosh-zeta/Santhosh-zeta/output/project-3-dark.svg" width="100%">
+  <img alt="Santhosh-zeta/Clinical-Database-Intelligence: Production-grade hospital intelligence platform — TimescaleDB hypertables, NEWS2 EWS scoring, PG NOTIFY → Socket.io real-time alerting, OLS trend detection, RBAC, multi-tenancy, Markov-chain vitals simulator." src="https://raw.githubusercontent.com/Santhosh-zeta/Santhosh-zeta/output/project-3-dark.svg" width="100%">
 </picture>
 </a></td><td width="50%"><a href="https://github.com/Santhosh-zeta/Dropwing_Groups-Public_Website">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Santhosh-zeta/Santhosh-zeta/output/project-4-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Santhosh-zeta/Santhosh-zeta/output/project-4-light.svg">
-  <img alt="Santhosh-zeta/Dropwing_Groups-Public_Website: " src="https://raw.githubusercontent.com/Santhosh-zeta/Santhosh-zeta/output/project-4-dark.svg" width="100%">
+  <img alt="Santhosh-zeta/Dropwing_Groups-Public_Website: Four studios. One group. Design · Software · Automation · Marketing." src="https://raw.githubusercontent.com/Santhosh-zeta/Santhosh-zeta/output/project-4-dark.svg" width="100%">
 </picture>
 </a></td></tr>
 </table>
