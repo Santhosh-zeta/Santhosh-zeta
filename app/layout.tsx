@@ -5,6 +5,7 @@ import { SITE } from "@/lib/site";
 import { homeGraph, ld } from "@/lib/jsonld";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Spotlight from "@/components/Spotlight";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -16,8 +17,8 @@ export const metadata: Metadata = {
   creator: SITE.name,
   publisher: SITE.name,
   keywords: [
-    "Santhosh V", "Santhosh-zeta", "full-stack developer", "machine learning engineer", "mobile developer",
-    "DevOps engineer", "React", "Next.js", "TypeScript", "Python", "Flutter", "portfolio",
+    "Santhosh V", "Santhosh-zeta", "Santhosh V VIT Chennai", "AI automation", "n8n", "full-stack developer",
+    "business development", "digital marketing", "Dropwing Groups", "ColdGuard", "Technical Lead AI Club VIT Chennai", "portfolio",
   ],
   alternates: { canonical: "/" },
   openGraph: {
@@ -50,6 +51,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <a className="skip" href="#main">Skip to content</a>
         <Header />
         <main id="main">{children}</main>
+        <Spotlight />
+        <div className="grain" aria-hidden="true" />
         <Footer />
       </body>
     </html>

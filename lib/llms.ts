@@ -6,15 +6,17 @@ export function llmsShort(): string {
 
 > ${SITE.description}
 
-${SITE.name} (GitHub: ${SITE.handle}) is a ${SITE.jobTitle}. ${SITE.status}.
+${SITE.name} (GitHub: ${SITE.handle}) is based in ${SITE.location}. ${SITE.status}.
 
 ## Pages
-- [Home](${SITE.url}): about, tech stack, selected work, contact
+- [Home](${SITE.url}): about, what he does, work, experience, stack, GitHub activity, FAQ, contact
+- [Résumé](${SITE.url}/resume): printable one-page résumé
 ${PROJECTS.map((p) => `- [${p.name}](${projectUrl(p.slug)}): ${p.tagline}`).join("\n")}
 
 ## Elsewhere
 - [GitHub](${SITE.github})
 - [LinkedIn](${SITE.linkedin})
+- [Dropwing Groups](${SITE.company.url})
 - Email: ${SITE.email}
 
 ## Full text
@@ -30,15 +32,33 @@ ${SITE.description}
 ## About
 ${SITE.about.join("\n\n")}
 
-Focus areas: ${SITE.roles.join(", ")}. Currently learning: system design, MLOps.
+## Questions and answers
+${SITE.faq.map(([q, a]) => `Q: ${q}\nA: ${a}`).join("\n\n")}
+
+## What he does
+${SITE.services.map((s) => `- ${s.title}: ${s.text}`).join("\n")}
+
+## Experience
+${SITE.experience.map((e) => `- ${e.role}, ${e.org} (${e.period}): ${e.text}`).join("\n")}
+
+## Education
+${SITE.education.map((e) => `- ${e.title}, ${e.org} (${e.period})`).join("\n")}
+
+## Certifications
+${SITE.certifications.map((c) => `- ${c.title}, ${c.org} (${c.period})`).join("\n")}
+
+## Community and events
+${SITE.community.map((c) => `- ${c.title} (${c.kind}): ${c.text}`).join("\n")}
+
+## Writing
+${SITE.writing.map((w) => `- ${w.title} (${w.meta}): ${w.href}\n  ${w.text}`).join("\n")}
 
 ## Tech stack
 ${SITE.stack.map(([l, items]) => `- ${l}: ${items.join(", ")}`).join("\n")}
 
 ## Selected work
 ${PROJECTS.map((p) => `### ${p.name}
-URL: ${projectUrl(p.slug)}
-Source: ${repoUrl(p)}
+URL: ${projectUrl(p.slug)}${repoUrl(p) ? `\nSource: ${repoUrl(p)}` : ""}${p.site ? `\nSite: ${p.site}` : ""}
 Language: ${p.language}
 ${p.summary}
 ${p.points.map((x) => `- ${x}`).join("\n")}

@@ -11,7 +11,22 @@ export const person = {
   email: `mailto:${SITE.email}`,
   jobTitle: SITE.jobTitle,
   description: SITE.description,
-  sameAs: [SITE.github, SITE.linkedin],
+  address: { "@type": "PostalAddress", addressLocality: "Chennai", addressRegion: "Tamil Nadu", addressCountry: "IN" },
+  sameAs: [SITE.github, SITE.linkedin, SITE.company.url, SITE.medium],
+  worksFor: [
+    { "@type": "Organization", name: SITE.company.name, url: SITE.company.url },
+    { "@type": "Organization", name: "Dropwing Design Studio" },
+  ],
+  alumniOf: { "@type": "CollegeOrUniversity", name: "Vellore Institute of Technology, Chennai" },
+  memberOf: [
+    { "@type": "Organization", name: "Artificial Intelligence Club, VIT Chennai" },
+    { "@type": "Organization", name: "Linux Club, VIT Chennai" },
+  ],
+  hasCredential: SITE.certifications.map((c) => ({
+    "@type": "EducationalOccupationalCredential",
+    name: c.title,
+    recognizedBy: { "@type": "Organization", name: c.org },
+  })),
   knowsAbout: SITE.stack.flatMap(([, items]) => [...items]),
 };
 
@@ -31,7 +46,7 @@ export function homeGraph() {
       },
       {
         "@type": "ProfilePage",
-        "@id": `${SITE.url}/#profilepage`,
+        "@id": id("profilepage"),
         url: SITE.url,
         name: SITE.title,
         isPartOf: { "@id": id("website") },
@@ -40,18 +55,19 @@ export function homeGraph() {
       {
         "@type": "ItemList",
         name: "Selected work",
-        itemListElement: PROJECTS.map((p, i) => ({
-          "@type": "ListItem",
-          position: i + 1,
-          url: projectUrl(p.slug),
-          name: p.name,
-        })),
+        itemListElement: PROJECTS.map((p, i) => ({ "@type": "ListItem", position: i + 1, url: projectUrl(p.slug), name: p.name })),
+      },
+      {
+        "@type": "FAQPage",
+        "@id": id("faq"),
+        mainEntity: SITE.faq.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })),
       },
     ],
   };
 }
 
 export function projectGraph(p: Project) {
+  const repo = repoUrl(p);
   return {
     "@context": "https://schema.org",
     "@graph": [
@@ -61,7 +77,7 @@ export function projectGraph(p: Project) {
         name: p.name,
         description: p.summary,
         url: projectUrl(p.slug),
-        codeRepository: repoUrl(p),
+        ...(repo ? { codeRepository: repo } : {}),
         programmingLanguage: p.language,
         keywords: p.tags.join(", "),
         author: { "@id": id("person") },

@@ -38,3 +38,23 @@ Plus: `/sitemap.xml`, `/robots.txt`, `/manifest.webmanifest`, `/llms.txt`, `/llm
 ## Roadmap ideas
 Case-study depth per project (problem → approach → result, screenshots), a writing/notes section, an RSS feed,
 Vercel Analytics or Plausible, and a custom domain.
+
+---
+
+## v2 upgrade (content + interaction)
+
+**Content** now comes from the real LinkedIn profile: founding roles (Dropwing Groups, Dropwing Design Studio), AI Club Technical Lead,
+Linux Club, 50+ clients, community events, certifications, the Raspberry Pi 5 homelab, RAKSHAK AI, and the updated ColdGuard facts
+(12 vaccines, 6 languages, MIT, merged contributors). Private LinkedIn data (analytics, suggestions, third-party names) is deliberately left out.
+Every claim on the site traces back to text the owner wrote.
+
+**New sections:** metrics strip with count-up · marquee · What I do · Experience timeline + education + certifications ·
+Community & writing · live GitHub activity (greyscale grid, from the nightly `output/data.json`) · "Quick answers" FAQ · printable `/resume`.
+
+**New interactions:** ⌘K / Ctrl+K command palette (jump to sections/projects, open links, copy email, toggle theme) ·
+pointer-following spotlight on cards · film-grain overlay · outlined marquee · scroll-progress bar.
+
+**SEO/GEO additions:** `Person` now includes employer, school, memberships, credentials and location; `FAQPage` JSON-LD
+(and visible FAQ, which AI engines quote); `/resume` in the sitemap; the FAQ and experience are repeated in `llms-full.txt`.
+
+**Still manual:** set the real domain (`NEXT_PUBLIC_SITE_URL`), Search Console verification, add screenshots to project pages.
