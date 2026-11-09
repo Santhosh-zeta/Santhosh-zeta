@@ -59,7 +59,8 @@ export default async function ProjectPage({ params }: Props) {
               <div><dt className="label">Built with</dt><dd>{p.tags.join(" · ")}</dd></div>
               <div><dt className="label">Author</dt><dd>{SITE.name}</dd></div>
             </dl>
-            <a className="btn solid" href={repoUrl(p)} rel="noopener">View source <Arrow size={14} /></a>
+            {p.site && <a className="btn solid" href={p.site} rel="noopener">Visit site <Arrow size={14} /></a>}
+            {repoUrl(p) && <a className={`btn ${p.site ? "ghost" : "solid"}`} href={repoUrl(p)} rel="noopener">View source <Arrow size={14} /></a>}
           </aside>
         </div>
 
