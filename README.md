@@ -123,6 +123,6 @@
 
 <a href="mailto:iamsanthosh2425@gmail.com">iamsanthosh2425@gmail.com</a> &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/santhosh---v/">LinkedIn</a> &nbsp;·&nbsp; <a href="https://github.com/Santhosh-zeta">GitHub</a>
 
-<sub>Cards are generated from <a href="profile.toml"><code>profile.toml</code></a> by <a href="scripts/generate.py"><code>scripts/</code></a> — plain Python, no dependencies. Live cards rebuild nightly.</sub>
+<sub>Cards are generated from <a href="profile.toml"><code>profile.toml</code></a> by <a href="scripts/generate.py"><code>scripts/</code></a> — plain Python, no dependencies. Live cards rebuild nightly. <a href="EDITING.md">How to edit</a>.</sub>
 
 </div>
